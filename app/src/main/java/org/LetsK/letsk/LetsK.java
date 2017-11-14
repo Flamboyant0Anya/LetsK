@@ -42,6 +42,8 @@ public class LetsK extends Activity {
 	int recordDuration = 8;//????
 	myWavRecorder recorderInstance;
 	Thread recordThread, playThread, recogThread, stopThread;
+	MediaPlayer mMediaPlayer;
+	boolean isplay,ispaused;
 
 	protected static final int RECORDING = 101;
 	protected static final int REC_FINISH = 102;
@@ -63,13 +65,12 @@ public class LetsK extends Activity {
 			}
 			if (v.getId() == R.id.play) {
 				if (wavFile.exists()) {
-					if (isplay) {
+					if (!isplay) {
 						Message m = new Message();
 						m.what = PLAY;
 						myMessageHandler.sendMessage(m);
 						recordBtn.setEnabled(false);
-						playBtn.setEnabled(false);
-
+						isplay=true;
 						playThread = new Thread(new PlayThread());
 						playThread.start();
 					}
@@ -79,9 +80,10 @@ public class LetsK extends Activity {
 						myMessageHandler.sendMessage(m);
 						recordBtn.setEnabled(true);
 						playBtn.setEnabled(true);
-
-						playThread = new Thread(new PlayThread());
-						playThread.start();
+						isplay=false;
+						playThread.interrupt();
+						stopThread = new Thread(new stopThread());
+						stopThread.start();
 					}
 				} else {
 					tv.setText("Error");
@@ -117,8 +119,12 @@ public class LetsK extends Activity {
 		tvword=(TextView) findViewById(R.id.tvword);
         recordBtn = (Button) findViewById(R.id.record);
         playBtn = (Button) findViewById(R.id.play);
+		mMediaPlayer = new MediaPlayer();
 
-        recordBtn.setOnClickListener(btnListener);
+		isplay=false;
+		ispaused=false;
+
+		recordBtn.setOnClickListener(btnListener);
         playBtn.setOnClickListener(btnListener);
 
         wavFile = new File(wavFilePath);
@@ -151,7 +157,7 @@ public class LetsK extends Activity {
 					}
 					break;
 				case STOP:
-					tv.setText("stop");
+					tv.setText("stop");break;
 				case PLAY_FINISH:
 					playThread.interrupt();
 					playThread = null;
@@ -399,9 +405,15 @@ public class LetsK extends Activity {
     	public void run() {
     		// TODO Auto-generated method stub
     		try {
-    			MediaPlayer mMediaPlayer = new MediaPlayer();
-    			mMediaPlayer.setDataSource(wavFilePath);
-        		mMediaPlayer.prepare();
+				if (!ispaused) {
+					try {
+						mMediaPlayer.reset();
+						mMediaPlayer.setDataSource(wavFilePath);
+						mMediaPlayer.prepare();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
         		mMediaPlayer.start();
                 synchronized (this) {
                     try {
@@ -413,15 +425,26 @@ public class LetsK extends Activity {
     		} catch (Exception e) {
     			e.printStackTrace();
     		}
+			isplay=false;
     		Message m = new Message();
 			m.what=PLAY_FINISH;
 			myMessageHandler.sendMessage(m);
     	}
     }
-    
+
+	class stopThread implements Runnable {
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			ispaused=true;
+			mMediaPlayer.pause();
+		}
+	}
+
     class RecogThread implements Runnable {
 		@Override
 		public void run() {
+			ispaused=false;
 			goRecog();
 			Message m = new Message();
 			m.what=RECOG_FINISH;

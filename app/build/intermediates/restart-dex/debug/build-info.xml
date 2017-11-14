@@ -5,26 +5,26 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="1147379405730271"
+    timestamp="1150784602254486"
     token="2480941880516056621"
-    verifier="MANIFEST_FILE_CHANGE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="494" />
+        duration="199" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="177" />
+        duration="53" />
     <task
         name="verifier"
-        duration="47" />
+        duration="6" />
 
     <artifact
-        location="D:\2017\Miracle\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="D:\2017\Miracle\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        type="DEX" />
 
     <build
         timestamp="1147379405730271"
@@ -32,6 +32,13 @@
         <artifact
             location="D:\2017\Miracle\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="1150784602254486"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\2017\Miracle\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
