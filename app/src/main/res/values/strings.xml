@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LetsK</string>
+    <string name="record">Record</string>
+    <string name="play">Play</string>
+    <string name="recordPrompt">Please Record First</string>
+    <string name="pitch">pitch</string>
+    <string name="word">words</string>
+	
+</resources>

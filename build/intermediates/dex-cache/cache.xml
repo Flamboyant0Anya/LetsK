@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\2017\Miracle\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="75de08d70bbeccb613be31758f6063cfe47ce7fa">
+        <dex dex="D:\2017\Miracle\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a79fd3fcbd89c59f411efa56020e938ca1d1530d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\2017\Miracle\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4f72e4a1c751629c0b5c2651dc2be65cc7e44c78">
+        <dex dex="D:\2017\Miracle\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_97cb54ef68b676ad964b61e2d410ae01dca1f2a0\classes.dex" />
+    </item>
+
+</items>

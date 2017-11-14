@@ -1,0 +1,92 @@
+[
+    {
+        "outputFile": "D:\\2017\\Miracle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 5,
+                    "endColumn": 9,
+                    "endOffset": 131
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\compares.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 136,
+                    "endColumn": 42,
+                    "endOffset": 174
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 179,
+                    "endColumn": 39,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 37,
+                    "endOffset": 252
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 257,
+                    "endColumn": 41,
+                    "endOffset": 294
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 299,
+                    "endColumn": 60,
+                    "endOffset": 355
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 360,
+                    "endColumn": 38,
+                    "endOffset": 394
+                },
+                "from": {
+                    "file": "D:\\2017\\Miracle\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            }
+        ]
+    }
+]

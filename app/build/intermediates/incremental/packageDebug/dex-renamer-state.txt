@@ -1,0 +1,7 @@
+#Tue Nov 14 21:00:23 CST 2017
+base.0=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a79fd3fcbd89c59f411efa56020e938ca1d1530d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_97cb54ef68b676ad964b61e2d410ae01dca1f2a0\\classes.dex
+base.1=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_97cb54ef68b676ad964b61e2d410ae01dca1f2a0
+file.0=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a79fd3fcbd89c59f411efa56020e938ca1d1530d\\classes.dex
