@@ -1,4 +1,4 @@
-#Wed Nov 15 08:50:55 CST 2017
+#Wed Nov 15 09:25:44 CST 2017
 base.0=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a79fd3fcbd89c59f411efa56020e938ca1d1530d
 renamed.1=classes.dex
 renamed.0=classes2.dex
