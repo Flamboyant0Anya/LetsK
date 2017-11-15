@@ -39,11 +39,11 @@ public class LetsK extends Activity {
 
 	TextView tv,tvpitch,tvword;
 	Button recordBtn, playBtn;
-	int recordDuration = 8;//????
+	//int recordDuration = 8;//????
 	myWavRecorder recorderInstance;
 	Thread recordThread, playThread, recogThread, stopThread;
 	MediaPlayer mMediaPlayer;
-	boolean isplay,ispaused;
+	boolean isplay,ispaused,isrecording;
 
 	protected static final int RECORDING = 101;
 	protected static final int REC_FINISH = 102;
@@ -58,10 +58,21 @@ public class LetsK extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			if (v.getId() == R.id.record) {
-				recordBtn.setEnabled(false);
-				playBtn.setEnabled(false);
-				recordThread = new Thread(new RecordThread());
-				recordThread.start();
+				if (!isrecording) {
+					//recordBtn.setEnabled(false);
+					isrecording=true;
+					playBtn.setEnabled(false);
+					recordThread = new Thread(new RecordThread());
+					recordThread.start();
+				}
+				else{
+					isrecording=false;
+					recorderInstance.setRecording(false);
+					Message m = new Message();
+					m.what=REC_FINISH;
+					myMessageHandler.sendMessage(m);
+
+				}
 			}
 			if (v.getId() == R.id.play) {
 				if (wavFile.exists()) {
@@ -123,6 +134,7 @@ public class LetsK extends Activity {
 
 		isplay=false;
 		ispaused=false;
+		isrecording=false;
 
 		recordBtn.setOnClickListener(btnListener);
         playBtn.setOnClickListener(btnListener);
@@ -375,28 +387,14 @@ public class LetsK extends Activity {
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
+			Message m = new Message();
+			m.what=RECORDING;
+			myMessageHandler.sendMessage(m);
 			recorderInstance = new myWavRecorder();
 			Thread th = new Thread(recorderInstance);
 			recorderInstance.setwaveFileName(wavFile);
 			recorderInstance.setRecording(true);
 			th.start();
-			for (int i = 0; i < (recordDuration * 10); i++) {
-				try{
-					Thread.sleep(100);
-					if(i==(recordDuration * 10 - 1)){
-						Message m = new Message();
-						m.what=REC_FINISH;
-						myMessageHandler.sendMessage(m);
-					} else {
-						Message m = new Message();
-						m.what=RECORDING;
-						myMessageHandler.sendMessage(m);
-					}
-				} catch(Exception e) {
-					e.printStackTrace();
-				}
-			}
-			recorderInstance.setRecording(false);
 		}
     }
 
@@ -417,7 +415,7 @@ public class LetsK extends Activity {
         		mMediaPlayer.start();
                 synchronized (this) {
                     try {
-                    	this.wait(recordDuration * 1000);
+                    	this.wait(mMediaPlayer.getDuration()*9/10);
                     } catch (InterruptedException e) {
                     	e.printStackTrace();
                     }
