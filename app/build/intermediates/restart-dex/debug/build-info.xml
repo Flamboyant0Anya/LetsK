@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="22"
+    api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="1192099327911630"
-    token="2480941880516056621"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="101067869104582"
+    token="1335497285005016031"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1680" />
+        duration="518" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="318" />
+        duration="149" />
     <task
         name="verifier"
-        duration="30" />
+        duration="27" />
 
     <artifact
-        location="D:\2017\Miracle\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="D:\2017\LetsK-master\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="1192099327911630"
+        timestamp="100756456536724"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="D:\2017\Miracle\app\build\outputs\apk\app-debug.apk"
+            location="D:\2017\LetsK-master\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="101067869104582"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\2017\LetsK-master\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

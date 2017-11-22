@@ -1,5 +1,9 @@
 package org.LetsK.record;
 
+import android.media.AudioFormat;
+import android.media.AudioRecord;
+import android.media.MediaRecorder;
+
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -7,10 +11,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-
-import android.media.AudioFormat;
-import android.media.AudioRecord;
-import android.media.MediaRecorder;
 
 public class myWavRecorder implements Runnable {
      private int frequency;
@@ -22,6 +22,7 @@ public class myWavRecorder implements Runnable {
      private volatile boolean isRecording;
      private final Object mutex = new Object();
      private static final int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
+    public boolean flag;
 
      public myWavRecorder() {
           super();
@@ -29,6 +30,7 @@ public class myWavRecorder implements Runnable {
           this.setChannelConfiguration(AudioFormat.CHANNEL_CONFIGURATION_MONO);
           this.setPaused(false);
           this.setRecording(false);
+         flag=false;
      }
 
      public void run() {
@@ -183,7 +185,7 @@ public class myWavRecorder implements Runnable {
          out.write(val >> 8);
      }
 
-     public void save2wav(ArrayList<Short> allBuf){	 
+     public void save2wav(ArrayList<Short> allBuf){
     	 // open file
     	 if (waveFileName == null) {throw new IllegalStateException("fileName is null");}
     	 if (waveFileName.exists()) {waveFileName.delete();}
@@ -227,6 +229,7 @@ public class myWavRecorder implements Runnable {
         	 
         	 waveOutputStreamInstance.flush();
         	 waveOutputStreamInstance.close();
+             flag=true;
          }
          catch (IOException e) {
         	 throw new IllegalStateException("Wave write error ...QAQ");

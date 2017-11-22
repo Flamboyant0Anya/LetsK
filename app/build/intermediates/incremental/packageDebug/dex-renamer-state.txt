@@ -1,7 +1,7 @@
-#Wed Nov 15 09:25:44 CST 2017
-base.0=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a79fd3fcbd89c59f411efa56020e938ca1d1530d
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_97cb54ef68b676ad964b61e2d410ae01dca1f2a0\\classes.dex
-base.1=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_97cb54ef68b676ad964b61e2d410ae01dca1f2a0
-file.0=D\:\\2017\\Miracle\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a79fd3fcbd89c59f411efa56020e938ca1d1530d\\classes.dex
+#Wed Nov 22 20:15:26 CST 2017
+base.0=D\:\\2017\\LetsK-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_1bc6271ff8a8da6af79e104bf9d47ea69af83bbb
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\2017\\LetsK-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_d88ee379f8df0cd9240e636e77e1abc845fa9086\\classes.dex
+base.1=D\:\\2017\\LetsK-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_d88ee379f8df0cd9240e636e77e1abc845fa9086
+file.0=D\:\\2017\\LetsK-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_1bc6271ff8a8da6af79e104bf9d47ea69af83bbb\\classes.dex

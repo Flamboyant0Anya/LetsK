@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 10
     buildToolsVersion "26.0.2"
@@ -16,4 +15,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
+    compile files('src/main/libs/Msc.jar')
+    compile files('src/main/libs/Sunflower.jar')
 }
