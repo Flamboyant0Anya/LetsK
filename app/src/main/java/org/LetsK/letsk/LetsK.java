@@ -35,6 +35,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -301,26 +302,70 @@ public class LetsK extends Activity {
 					float freq = fs/(maxIndex_acf);
 
 					pitch[i] = 10*(  (int) (  69+12*(  (float) (  Math.log(freq/440) / Math.log(2.0)  )  )  )  );
-
-					if ((pitch[i-1] - pitch[i])> 150){
-						int flag_i = 2;
-						pitch[i-1] = pitch[i];
-
-						while (flag_i >= 2) {
-							if ((pitch[i-flag_i] - pitch[i]) >150){
-								pitch[i-flag_i] = 0;
-								flag_i = flag_i +1;
-							}else{
-								flag_i =0;
-							}
-						}
-					}
+/*简化暂时删掉*/
+//					if ((pitch[i-1] - pitch[i])> 150){
+//						int flag_i = 2;
+//						pitch[i-1] = pitch[i];
+//
+//						while (flag_i >= 2) {
+//							if ((pitch[i-flag_i] - pitch[i]) >150){
+//								pitch[i-flag_i] = 0;
+//								flag_i = flag_i +1;
+//							}else{
+//								flag_i =0;
+//							}
+//						}
+//					}
 				}
 			}
-			sb.delete(0, sb.length());
 
-			for(int i = 0; i< pitch.length; i ++){
-				sb.append(pitch[i]).append('+');
+			ArrayList<Integer> pitch_simplify=new ArrayList<Integer>();
+			int L = 2;//基音平滑去野点
+			for (int r=0;r<4;r++)
+			for (int i = L;i<frameNum-L-1;i++){
+				int [] sort=new int[2*L+1];
+				for (int j = i-L;j<i+L+1;j++)
+					sort[j-i+L]=pitch[j];
+				for (int j =0;j<2*L;j++)
+					for (int k = j+1;k<2*L+1;k++)
+						if (sort[j]>sort[k]){
+							sort[j]+=sort[k];
+							sort[k]=sort[j]-sort[k];
+							sort[j]=sort[j]-sort[k];
+						}
+				pitch[i-L]=sort[L];
+			}
+			for(int i = 0;i<frameNum-5*L*2;i++){
+				boolean f1,f2;
+				f1=f2=true;
+				for (int j = i+1;j<i+4;j++) if (pitch[j]!=pitch[i]){
+					f1=false;break;
+				}
+				for (int j = i+1;j<i+8;j++) if (Math.abs(pitch[j]-pitch[i])>=20){
+					f2=false;break;
+				}
+				if (f1&&f2) pitch_simplify.add(pitch[i]);
+			}
+
+//			pitch_simplify.add(pitch[0]);
+//			for(int i = 1;i<frameNum-6;i++){
+//				if (Math.abs(pitch[i]-pitch[i-1])>=10){
+//					int j;
+//					for (j = i+1;j<i+6;j++)
+//						if (Math.abs(pitch[j]-pitch[i])>10) break;
+//					if (j==i+6) pitch_simplify.add(pitch[i]);
+//				}
+//			}
+
+			sb.delete(0, sb.length());
+/*为了简化暂时删掉*/
+//			for(int i = 0; i< pitch.length; i ++){
+//				sb.append(pitch[i]).append('+');
+//			}
+
+			for(int i =0;i<pitch_simplify.size();i++)
+			{
+				sb.append(pitch_simplify.get(i)+" ");
 			}
 			//delete the last "+"
 			sb.deleteCharAt(sb.length()-1);
