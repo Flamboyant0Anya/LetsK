@@ -301,7 +301,7 @@ public class LetsK extends Activity {
 
 					float freq = fs/(maxIndex_acf);
 
-					pitch[i] = 10*(  (int) (  69+12*(  (float) (  Math.log(freq/440) / Math.log(2.0)  )  )  )  );
+					pitch[i] = (int) (10*(  (  69+12*(  (float) (  Math.log(freq/440) / Math.log(2.0)  )  )  ) ) );
 /*简化暂时删掉*/
 //					if ((pitch[i-1] - pitch[i])> 150){
 //						int flag_i = 2;
@@ -338,13 +338,16 @@ public class LetsK extends Activity {
 			for(int i = 0;i<frameNum-5*L*2;i++){
 				boolean f1,f2;
 				f1=f2=true;
-				for (int j = i+1;j<i+4;j++) if (pitch[j]!=pitch[i]){
+				for (int j = i+1;j<i+3;j++) if (pitch[j]!=pitch[i]){
 					f1=false;break;
 				}
-				for (int j = i+1;j<i+8;j++) if (Math.abs(pitch[j]-pitch[i])>=20){
+				for (int j = i+1;j<i+5;j++) if (Math.abs(pitch[j]-pitch[i])>=20){
 					f2=false;break;
 				}
-				if (f1&&f2) pitch_simplify.add(pitch[i]);
+				if (f1&&f2)
+					if (pitch_simplify.isEmpty()||pitch[i]!=pitch_simplify.get(pitch_simplify.size()-1))
+						if (pitch[i]!=0)
+							pitch_simplify.add(pitch[i]);
 			}
 
 //			pitch_simplify.add(pitch[0]);
