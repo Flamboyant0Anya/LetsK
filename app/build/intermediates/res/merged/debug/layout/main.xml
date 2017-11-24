@@ -2,25 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#FFFFFF">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:id="@+id/tvpitch"
-        android:text="@string/pitch"/>
+        android:text="@string/pitch"
+        android:textSize="20sp"
+        android:textColor="@drawable/themedark"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:id="@+id/tvword"
-        android:text="@string/word"/>
+        android:text="@string/word"
+        android:textSize="20sp"
+        android:textColor="@drawable/themedark" />
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-    	android:textColor="#CC0033" 
-        android:text="@string/recordPrompt" />
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="@string/recordPrompt"
+        android:textColor="#CC0033" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_weight="0">
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/playbutton"
+            />
+
+        <ImageButton
+            android:id="@+id/record"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/recordbutton"
+             />
+
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -28,24 +58,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:secondaryProgress="0" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:layout_weight="0">
-
-        <Button
-            android:id="@+id/record"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/record" />
-
-        <Button
-            android:id="@+id/play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/play" />
-
-
-    </LinearLayout>
 
 </LinearLayout>

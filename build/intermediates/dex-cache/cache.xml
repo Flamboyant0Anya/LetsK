@@ -2,40 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="D:\2017\LetsK-master\app\src\main\libs\Sunflower.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="dffa0220b64d2017db2517325926313c5f186d73">
-        <dex dex="D:\2017\LetsK-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\Sunflower_e3da279c7de6fd0838003c34c815927001f60ac3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\2017\LetsK-master\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="4f7e1badbfd8c31e977d9cecf528496f1f934ea3">
-        <dex dex="D:\2017\LetsK-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1bc6271ff8a8da6af79e104bf9d47ea69af83bbb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\2017\LetsK-master\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="5e7dab012af7c040e4564571a8a5b8ae5918da51">
-        <dex dex="D:\2017\LetsK-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d88ee379f8df0cd9240e636e77e1abc845fa9086\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\2017\LetsK-master\app\src\main\libs\Msc.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/hazel07/Desktop/LetsK/app/src/main/libs/Msc.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="666bf41b2aa9ec89cbd1f7b44c44e119e772cd83">
-        <dex dex="D:\2017\LetsK-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_9b50960c881a9d22d4cdc4e39d11aad98ae65e9b\classes.dex" />
+        <dex dex="/Users/hazel07/Desktop/LetsK/app/build/intermediates/pre-dexed/debug/Msc_8959cb049fb732754b14e54bfc32fc780d6ba3e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/hazel07/Desktop/LetsK/app/src/main/libs/Sunflower.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dffa0220b64d2017db2517325926313c5f186d73">
+        <dex dex="/Users/hazel07/Desktop/LetsK/app/build/intermediates/pre-dexed/debug/Sunflower_9dd33b783d7f3ce1999d9f982f38f060dc17a346.jar" />
     </item>
 
 </items>
