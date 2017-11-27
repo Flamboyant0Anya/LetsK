@@ -1,4 +1,7 @@
-#Fri Nov 24 14:48:08 CST 2017
-base.0=/Users/hazel07/Desktop/LetsK/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Mon Nov 27 21:52:22 CST 2017
+base.0=D\:\\LetsK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_56d17d4fd57e90a9562e00508baa258a2b284635
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=/Users/hazel07/Desktop/LetsK/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.1=D\:\\LetsK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_872e7cc550e085b85301cc2fce63b795409c26fe\\classes.dex
+base.1=D\:\\LetsK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_872e7cc550e085b85301cc2fce63b795409c26fe
+file.0=D\:\\LetsK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_56d17d4fd57e90a9562e00508baa258a2b284635\\classes.dex

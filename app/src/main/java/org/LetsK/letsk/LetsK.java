@@ -9,7 +9,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -53,7 +53,7 @@ public class LetsK extends Activity {
 	File wavFile;
 
 	TextView tv,tvpitch,tvword;
-	Button recordBtn, playBtn, recword;
+	ImageButton recordBtn, playBtn;
 	myWavRecorder recorderInstance;
 	Thread recordThread, playThread, recogThread, stopThread, wordregThread,progressThread;
 	MediaPlayer mMediaPlayer;
@@ -152,8 +152,8 @@ public class LetsK extends Activity {
 		tv = (TextView) findViewById(R.id.tv);
 		tvpitch=(TextView) findViewById(R.id.tvpitch);
 		tvword=(TextView) findViewById(R.id.tvword);
-		recordBtn = (Button) findViewById(R.id.record);
-		playBtn = (Button) findViewById(R.id.play);
+		recordBtn = (ImageButton) findViewById(R.id.record);
+		playBtn = (ImageButton) findViewById(R.id.play);
 		mMediaPlayer = new MediaPlayer();
 		pgb=(ProgressBar) findViewById(R.id.progressbar);
 
@@ -350,15 +350,6 @@ public class LetsK extends Activity {
 							pitch_simplify.add(pitch[i]);
 			}
 
-//			pitch_simplify.add(pitch[0]);
-//			for(int i = 1;i<frameNum-6;i++){
-//				if (Math.abs(pitch[i]-pitch[i-1])>=10){
-//					int j;
-//					for (j = i+1;j<i+6;j++)
-//						if (Math.abs(pitch[j]-pitch[i])>10) break;
-//					if (j==i+6) pitch_simplify.add(pitch[i]);
-//				}
-//			}
 
 			sb.delete(0, sb.length());
 /*为了简化暂时删掉*/

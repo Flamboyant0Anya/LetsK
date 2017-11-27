@@ -2,22 +2,40 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/hazel07/Desktop/LetsK/app/src/main/libs/Msc.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="666bf41b2aa9ec89cbd1f7b44c44e119e772cd83">
-        <dex dex="/Users/hazel07/Desktop/LetsK/app/build/intermediates/pre-dexed/debug/Msc_8959cb049fb732754b14e54bfc32fc780d6ba3e0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/hazel07/Desktop/LetsK/app/src/main/libs/Sunflower.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="D:\LetsK\app\src\main\libs\Sunflower.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
         sha1="dffa0220b64d2017db2517325926313c5f186d73">
-        <dex dex="/Users/hazel07/Desktop/LetsK/app/build/intermediates/pre-dexed/debug/Sunflower_9dd33b783d7f3ce1999d9f982f38f060dc17a346.jar" />
+        <dex dex="D:\LetsK\app\build\intermediates\transforms\dex\debug\folders\1000\2\Sunflower_e5830c34694667cefc4737599997accd883bfd2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\LetsK\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="38e1d9f103382e82a6184621cc1440f7cc84455c">
+        <dex dex="D:\LetsK\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_56d17d4fd57e90a9562e00508baa258a2b284635\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\LetsK\app\src\main\libs\Msc.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="666bf41b2aa9ec89cbd1f7b44c44e119e772cd83">
+        <dex dex="D:\LetsK\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_6a3ca0dcf488eb724efd6d7755c0fbf862e5aff6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\LetsK\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6d892712bd1792628dd9c1a6abcdf7ecd458389d">
+        <dex dex="D:\LetsK\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_872e7cc550e085b85301cc2fce63b795409c26fe\classes.dex" />
     </item>
 
 </items>

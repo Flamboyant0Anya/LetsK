@@ -1,18 +1,14 @@
 [
     {
-        "merged": "/Users/hazel07/Desktop/LetsK/D:\\2017\\LetsK-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
-        "source": "/Users/hazel07/Desktop/LetsK/D:\\2017\\LetsK-master\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+        "merged": "D:\\LetsK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "D:\\LetsK\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/hazel07/Desktop/LetsK/app/build/intermediates/res/merged/debug/drawable-ldpi/playbutton.png",
-        "source": "/Users/hazel07/Desktop/LetsK/app/src/main/res/drawable-ldpi/playbutton.png"
+        "merged": "D:\\LetsK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\recordbutton.png",
+        "source": "D:\\LetsK\\app\\src\\main\\res\\drawable-ldpi\\recordbutton.png"
     },
     {
-        "merged": "/Users/hazel07/Desktop/LetsK/app/build/intermediates/res/merged/debug/drawable-ldpi/recordbutton.png",
-        "source": "/Users/hazel07/Desktop/LetsK/app/src/main/res/drawable-ldpi/recordbutton.png"
-    },
-    {
-        "merged": "/Users/hazel07/Desktop/LetsK/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_launcher.png",
-        "source": "/Users/hazel07/Desktop/LetsK/app/src/main/res/drawable-ldpi/ic_launcher.png"
+        "merged": "D:\\LetsK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\playbutton.png",
+        "source": "D:\\LetsK\\app\\src\\main\\res\\drawable-ldpi\\playbutton.png"
     }
 ]
